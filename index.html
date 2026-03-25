@@ -1,158 +1,332 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoja de vida</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Personal - Valentina Mancilla</title>
+  <meta name="description" content="Portafolio personal de Valentina Mancilla, desarrolladora de software en formación con proyectos en Python, HTML y CSS." />
 
-  <!-- Estilos externos: normalize.css reinicia estilos básicos y style.css define el diseño -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<body>
-
-  <!-- Tabla principal que organiza la hoja de vida en 3 columnas -->
-  <table width="100%" cellspacing="10">
-    <tr>
-      <!-- ========================== Columna 1: Información personal ========================== -->
-      <td width="33%" valign="top">
-        <!-- Foto de perfil -->
-        <center>
-          <div>
-            <img src="images/Imagen de WhatsApp 2025-08-30 a las 17.21.31_3345ceeb.jpg" 
-                 alt="Foto circular" 
-                 class="imagen-circular" 
-                 width="300%">
-          </div>
-        </center>
-
-        <!-- Sección: Información personal -->
-        <section class="seccion">
-          <h2 class="titulos">Información Personal</h2>
-          <p><b class="texto">Nombre:</b> Valentina</p>
-          <p><b class="texto">Apellidos:</b> Mancilla Casanova</p>
-          <p><b class="texto">Estado civil:</b> Unión libre</p>
-          <p><b class="texto">Género:</b> Femenino</p>
-        </section>
-
-        <!-- Sección: Información de contacto -->
-        <section class="seccion">
-          <h2 class="titulos">Información de Contacto</h2>
-          <p><b class="texto">Email:</b> valem2958@gmail.com</p>
-          <p><b class="texto">Nro Móvil:</b> 3137713137</p>
-          <p><b class="texto">Nro Fijo:</b> 607+3182822216</p>
-          <p><b class="texto">Dirección:</b> carrera 39#34-72 </p>
-          <p><b class="texto">Ciudad:</b> Bucaramanga</p>
-        </section>
-
-        <!-- Sección: Redes sociales -->
-        <h2 class="titulos">Redes Sociales</h2>
-        <ul>
-          <li class="info">
-            <img src="images/png-transparent-instagram-photo-materia-social-icon-removebg-preview.png"
-                 class="iconos"
-                 alt="instagram"/>
-            <a href="https://www.instagram.com/valem_0007?igsh=aHF0NGVrd3JrdGs1" class="link">Instagram</a>
-          </li>
-          <li class="info">
-            <img src="images/github_logo_icon_181401-removebg-preview.png"
-                 class="iconos"
-                 alt="GitHub"/>
-            <a href="https://github.com/valemancilla" class="link">GitHub</a>
-          </li>
+<body class="personal-body">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-mark">VM</span>
+        <span class="brand-text">Valentina Mancilla · Portafolio</span>
+      </a>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <!-- UPDATED CONTENT: NAV (texto del enlace) -->
+          <li><a href="#stack" class="nav-link">Servicios</a></li>
+          <li><a href="#proyectos-personales" class="nav-link">Proyectos</a></li>
+          <li><a href="#contacto-personal" class="nav-link">Contacto</a></li>
         </ul>
-      </td>
-      
+      </nav>
+    </div>
+  </header>
 
-      <!-- ========================== Columna 2: Formación académica y proyectos ========================== -->
-      <td width="34%" valign="top">
-        <!-- Sección: Formación académica -->
-        <section class="seccion">
-          <h2 class="titulos">Información Académica</h2>
-          <ul>
-            <li><p><b class="texto">Básica:</b> Colegio Campestre Goyavier</p></li>
-            <li><p><b class="texto">Secundaria:</b> Colegio Campestre Goyavier</p></li>
-            <li><p><b class="texto">Técnica:</b> Desarrolladora De Software (Campuslands)</p></li>
-          </ul>
-        </section>
-        
-        <!-- Sección: Proyectos -->
-        <h2 class="titulos">Proyectos</h2>
-        <table width="100%">
-          <tr>
-            <td>
-              <!-- Proyecto 1 -->
-              <div class="skills">
-                <h3>Guía De Ejercicios</h3>
-                <b class="texto">Stack:</b> Git<br>
-                <p>Este proyecto es una guía de ejercicios físicos que describe distintos tipos de entrenamientos como cardio, fuerza, yoga, pilates, natación, entre otros.</p>
-                <a class="link" href="https://github.com/valemancilla/guiaejerciciosgit.git"><b>Ver repositorio</b></a>
-              </div>
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="personal-hero reveal">
+      <div class="personal-hero-text">
+        <!-- UPDATED CONTENT: HERO (Nombre/Rol/Especialidad/Valor) -->
+        <p class="hero-kicker">Valentina Mancilla · Desarrolladora de Software Junior</p>
+        <h1 class="personal-hero-title">
+          Desarrollo Web (Frontend y Backend)
+          <span>Transformo ideas en soluciones digitales funcionales y atractivas.</span>
+        </h1>
+        <p class="personal-hero-subtitle">
+          Diseño e implemento interfaces claras y funcionalidades útiles, cuidando la experiencia de usuario
+          y la calidad del código. Me motiva aprender de forma continua y aportar valor real a cada proyecto.
+        </p>
+        <div class="hero-actions">
+          <!-- UPDATED CONTENT: HERO (Botones) -->
+          <a href="#contacto-personal" class="btn-cta btn-cta--primary">Contáctame</a>
+          <a href="#proyectos-personales" class="btn-cta btn-cta--secondary">Ver proyectos</a>
+        </div>
+        <div class="hero-tags">
+          <!-- UPDATED CONTENT: HERO (Especialidad / Skills clave) -->
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Python</span>
+        </div>
+      </div>
+      <div class="personal-hero-card">
+        <!-- UPDATED CONTENT: HERO (Tarjeta lateral) -->
+        <p class="mini-title">Disponible para</p>
+        <h2>Desarrolladora de Software Junior</h2>
+        <p>
+          Colaborar en productos web donde la claridad, la comunicación y los resultados sean prioridad.
+        </p>
+        <ul class="hero-highlights">
+          <li><i class="fas fa-check-circle"></i> Implementé interfaces responsivas con enfoque en UX.</li>
+          <li><i class="fas fa-check-circle"></i> Desarrollé funcionalidades y flujos completos (frontend + backend inicial).</li>
+          <li><i class="fas fa-check-circle"></i> Organicé trabajo y entregas con Git y buenas prácticas.</li>
+        </ul>
+      </div>
+    </section>
 
-              <!-- Proyecto 2 -->
-              <div class="skills">
-                <h3>Administrador de Colección de Libros/Películas/Música</h3>
-                <b class="texto">Stack:</b> Python <br>
-                <p>Gestor multimedia en Python que organiza libros, películas y música desde un menú en consola. Usa JSON para guardar los datos y la librería tabulate para mostrarlos.</p>
-                <a class="link" href="https://github.com/juaquija22/Proyecto_Python_1Quijano.Juan_2Mancilla.valentina.git"><b>Ver repositorio</b></a>
-              </div>
+    <!-- SOBRE MI -->
+    <section id="sobre-mi" class="section personal-section reveal">
+      <h2 class="section-title">Sobre mí</h2>
+      <div class="about-grid">
+        <p>
+          <!-- UPDATED CONTENT: SOBRE MÍ -->
+          Soy <strong>Valentina Mancilla</strong>, <strong>Desarrolladora de Software Junior</strong> enfocada en
+          <strong>desarrollo web</strong>. Disfruto convertir requerimientos en productos digitales claros, funcionales
+          y visualmente agradables, cuidando tanto la estructura como la experiencia de usuario.
+        </p>
+        <p>
+          Mantengo una mentalidad de <strong>aprendizaje continuo</strong>: pruebo, itero y mejoro en cada entrega.
+          Me motiva construir soluciones que ahorren tiempo, reduzcan errores y faciliten el trabajo de las personas,
+          combinando <strong>lógica</strong>, <strong>diseño</strong> y buena comunicación en equipo.
+        </p>
+      </div>
+    </section>
 
-              <!-- Proyecto 3 -->
-              <div class="skills">
-                <h3>Turismo</h3>
-                <b class="texto">Stack:</b> HTML y CSS <br>
-                <p>Proyecto web en HTML y CSS que presenta un mapa interactivo de Colombia. Incluye información sobre turismo, gastronomía, economía y cultura.</p>
-                <a class="link" href="https://github.com/valemancilla/Turismo.git"><b>Ver repositorio</b></a>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </td>
+    <!-- STACK -->
+    <section id="stack" class="section personal-section reveal">
+      <!-- UPDATED CONTENT: SERVICIOS (reutiliza estructura de Stack) -->
+      <h2 class="section-title">Servicios</h2>
+      <div class="stack-grid">
+        <article class="stack-card">
+          <h3>Desarrollo Web Frontend</h3>
+          <p>Diseñé e implementé interfaces responsivas y accesibles, enfocadas en claridad visual y experiencia de usuario.</p>
+          <div class="pill-row">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Responsive</span>
+          </div>
+        </article>
+        <article class="stack-card">
+          <h3>Desarrollo Backend (Python)</h3>
+          <p>Implementé lógica de negocio y manejo de datos para funcionalidades web, priorizando orden, validación y mantenibilidad.</p>
+          <div class="pill-row">
+            <span class="chip">Python</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">APIs</span>
+            <span class="chip">CRUD</span>
+          </div>
+        </article>
+        <article class="stack-card">
+          <h3>Aplicaciones web y sistemas de gestión</h3>
+          <p>Desarrollé soluciones para organizar información y automatizar tareas, reduciendo pasos manuales y mejorando el flujo de trabajo.</p>
+          <div class="pill-row">
+            <span class="chip">Git</span>
+            <span class="chip">Sistemas</span>
+            <span class="chip">Gestión</span>
+            <span class="chip">Documentación</span>
+          </div>
+        </article>
+        <article class="stack-card">
+          <h3>Soporte técnico básico</h3>
+          <p>Brindé apoyo en configuración, resolución de problemas comunes y mejoras rápidas para mantener proyectos funcionando sin fricción.</p>
+          <div class="pill-row">
+            <span class="chip">Diagnóstico</span>
+            <span class="chip">Buenas prácticas</span>
+            <span class="chip">Soporte</span>
+            <span class="chip">Orden</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      
-      <!-- ========================== Columna 3: Conocimientos, idiomas y video ========================== -->
-      <td width="33%" valign="top">
-        <!-- Sección: Conocimientos -->
-        <section class="seccion">
-          <h2 class="titulos">Conocimientos</h2>
-          <div class="skills">
-            <h3>Python</h3>
-            <p>Nivel: Básico</p>
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section personal-section reveal">
+      <!-- ADDED CONTENT: HABILIDADES (misma estructura visual) -->
+      <h2 class="section-title">Habilidades</h2>
+      <div class="stack-grid">
+        <article class="stack-card">
+          <h3>Técnicas</h3>
+          <p>Stack base para construir sitios y aplicaciones web con control de versiones y manejo de datos.</p>
+          <div class="pill-row">
+            <!-- UPDATED CONTENT: HABILIDADES (técnicas + nivel) -->
+            <span class="chip">HTML y CSS · Básicas</span>
+            <span class="chip">JavaScript · Básicas</span>
+            <span class="chip">Python · Básicas</span>
+            <span class="chip">C# · Básicas</span>
+            <span class="chip">.NET · Básicas</span>
+            <span class="chip">MySQL · Básicas</span>
+            <span class="chip">Git · Básicas</span>
+            <span class="chip">Scrum · Básicas</span>
           </div>
-          <div class="skills">
-            <h3>HTML / CSS</h3>
-            <p>Nivel: Básico</p>
+        </article>
+        <article class="stack-card">
+          <h3>Blandas</h3>
+          <p>Trabajo con enfoque en solución, aprendizaje y comunicación para entregar resultados útiles.</p>
+          <div class="pill-row">
+            <!-- UPDATED CONTENT: HABILIDADES (blandas) -->
+            <span class="chip">Resolución de problemas</span>
+            <span class="chip">Trabajo en equipo</span>
+            <span class="chip">Aprendizaje rápido</span>
+            <span class="chip">Comunicación efectiva</span>
+            <span class="chip">Adaptabilidad</span>
           </div>
-          <div class="skills">
-            <h3>Git</h3>
-            <p>Nivel: Básico</p>
-          </div>
-          <div class="skills">
-            <h3>Scrum</h3>
-            <p>Nivel: Básico</p>
-          </div>
-        </section>
+        </article>
+      </div>
+    </section>
 
-        <!-- Sección: Idiomas -->
-        <section class="seccion">
-          <h2 class="titulos">Idiomas</h2>
-          <div class="idioma">
-            <h3>Inglés</h3>
-            <p>Lee/Escribe/Habla: A2</p>
+    <!-- FORMACIÓN -->
+    <section id="formacion" class="section personal-section reveal">
+      <!-- ADDED CONTENT: FORMACIÓN (misma estructura visual) -->
+      <h2 class="section-title">Formación</h2>
+      <div class="stack-grid">
+        <article class="stack-card">
+          <!-- UPDATED CONTENT: FORMACIÓN -->
+          <h3>Técnico en desarrollo de software</h3>
+          <p>Campuslands Floridablanca</p>
+          <div class="pill-row">
+            <span class="chip">En proceso</span>
           </div>
-          <div class="idioma">
-            <h3>Español</h3>
-            <p>Lee/Escribe/Habla: Nativo</p>
+        </article>
+        <article class="stack-card">
+          <h3>Conocimientos académicos en inglés elemental</h3>
+          <p>Smart Academia</p>
+          <div class="pill-row">
+            <span class="chip">En proceso</span>
           </div>
-        </section>
+        </article>
+        <article class="stack-card">
+          <h3>Bachiller</h3>
+          <p>Colegio Campestre Goyavier<br />técnico en bellas artes</p>
+          <div class="pill-row">
+            <span class="chip">2024</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        <!-- Sección: Video de presentación -->
-        <h2 class="titulos">Video de Presentación</h2>
-        <video width="290" height="200" controls>
-          <source src="videos/video_20250628_170814.mp4" type="video/mp4">
-        </video>
-      </td>
-    </tr>
-  </table>
+    <!-- PROYECTOS PERSONALES -->
+    <section id="proyectos-personales" class="section personal-section reveal">
+      <h2 class="section-title">Proyectos personales</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-header">
+            <!-- UPDATED CONTENT: PROYECTOS -->
+            <h3>Administrador Multimedia</h3>
+            <span class="badge">Python</span>
+          </div>
+          <p>
+            Desarrollé una aplicación de consola para gestionar libros, películas y música, organizando datos y reduciendo el tiempo de búsqueda.
+            <br /><strong>Tecnologías:</strong> Python, JSON · <strong>Rol:</strong> Desarrollo completo · <strong>Impacto:</strong> información centralizada y fácil de consultar.
+          </p>
+          <a href="https://github.com/juaquija22/Proyecto_Python_1Quijano.Juan_2Mancilla.valentina.git" target="_blank" class="btn-primary">
+            Ver repositorio <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Guía de Ejercicios</h3>
+            <span class="badge">HTML/CSS</span>
+          </div>
+          <p>
+            Diseñé una guía web para explorar rutinas por objetivo, con contenido organizado y navegación simple.
+            <br /><strong>Tecnologías:</strong> HTML, CSS · <strong>Rol:</strong> Frontend · <strong>Impacto:</strong> acceso rápido a rutinas y estructura clara.
+          </p>
+          <a href="https://github.com/valemancilla/guiaejerciciosgit.git" target="_blank" class="btn-primary">
+            Ver repositorio <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Turismo Colombia</h3>
+            <span class="badge">HTML &amp; CSS</span>
+          </div>
+          <p>
+            Implementé un sitio informativo con secciones claras (turismo, gastronomía, cultura), priorizando lectura y orden visual.
+            <br /><strong>Tecnologías:</strong> HTML, CSS · <strong>Rol:</strong> Frontend · <strong>Impacto:</strong> contenido estructurado y fácil de explorar.
+          </p>
+          <a href="https://github.com/valemancilla/Turismo.git" target="_blank" class="btn-primary">
+            Ver repositorio <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Portafolio profesional de servicios</h3>
+            <span class="badge">HTML/CSS/JS</span>
+          </div>
+          <p>
+            Integré contenido profesional en una plantilla existente, manteniendo clases y diseño para una presentación clara de servicios.
+            <br /><strong>Tecnologías:</strong> HTML, CSS, JavaScript · <strong>Rol:</strong> Integración frontend · <strong>Impacto:</strong> comunicación más clara del perfil y oferta de valor.
+          </p>
+          <a href="#hero" class="btn-primary">
+            Ver en esta página <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Sistema de gestión (demo)</h3>
+            <span class="badge">Python/MySQL</span>
+          </div>
+          <p>
+            Implementé un flujo CRUD para registrar y consultar información, enfocándome en validaciones y orden del código.
+            <br /><strong>Tecnologías:</strong> Python, MySQL · <strong>Rol:</strong> Backend · <strong>Impacto:</strong> reducción de errores por validación y estructura consistente.
+          </p>
+          <a href="https://github.com/valemancilla" target="_blank" class="btn-primary">
+            Ver repositorio <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto-personal" class="section personal-section reveal">
+      <h2 class="section-title">¿Hablamos?</h2>
+      <p>
+        <!-- UPDATED CONTENT: CONTACTO -->
+        Si querés cotizar un servicio, hablar de una vacante o proponer una idea, escribime y te respondo lo antes posible.
+      </p>
+      <div class="contact-row">
+        <a href="mailto:valem2958@gmail.com" class="btn-cta btn-cta--primary">
+          Email
+        </a>
+        <a href="https://github.com/valemancilla" target="_blank" class="btn-cta btn-cta--secondary">GitHub</a>
+        <!-- ADDED CONTENT: CONTACTO (LinkedIn) -->
+        <a href="https://www.linkedin.com/in/tu-usuario/" target="_blank" class="btn-cta btn-cta--secondary">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year-personal"></span> Valentina Mancilla · Portafolio personal.</p>
+  </footer>
+
+  <script>
+    const yearPersonal = document.getElementById('year-personal');
+    if (yearPersonal) {
+      yearPersonal.textContent = new Date().getFullYear();
+    }
+
+    // Animación simple de revelado al hacer scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal--visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    revealEls.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>

@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/inex.html"
+    "livePreview.defaultPreviewPath": "/inex.html",
+    "liveServer.settings.port": 5502
 }
