@@ -60,7 +60,7 @@ HOJA DE PRESENTACION/
 - **README.md**: documentación del proyecto.
 
 # netlify
-https://gregarious-frangollo-b8383a.netlify.app/
+https://exquisite-semifreddo-8c7046.netlify.app/
 
 ## ✍️ Autores
 
