@@ -64,6 +64,6 @@ https://exquisite-semifreddo-8c7046.netlify.app/
 
 ## ✍️ Autores
 
-- ##### **Valentina Mancilla** Casanova
+- ##### **Valentina Mancilla Casanova**
 
   
