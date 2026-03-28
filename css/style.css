@@ -16,23 +16,26 @@
   --purple-300: #d8b4fe;
   --purple-400: #c084fc;
 
-  --accent-glow: rgba(244, 114, 182, 0.35);
-  --accent-glow-soft: rgba(216, 180, 254, 0.25);
+  --accent-glow: rgba(227, 123, 162, 0.4);
+  --accent-glow-soft: rgba(167, 136, 199, 0.2);
 
-  --bg-main: #fdf6fb;
-  --card-glass: rgba(255, 255, 255, 0.65);
-  --border-glass: rgba(255, 255, 255, 0.9);
+  --bg-main: #fcf8fa;
+  --card-solid: #ffffff;
+  --border-card: rgba(44, 31, 57, 0.04);
+  --shadow-card: 0 10px 40px rgba(44, 31, 57, 0.07);
 
-  --text-base: #4a3b4d;
-  --text-muted: #8b728e;
+  --text-base: #2C1F39;
+  --text-muted: #6B5B75;
   --text-light: #ffffff;
 
   --font-main: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-accent: 'Caveat', cursive;
   --font-code: 'Fira Code', monospace;
 
   --radius-sm: 12px;
-  --radius-md: 18px;
-  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
 
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,36 +109,21 @@ button { border: none; cursor: pointer; background: none; font-family: var(--fon
   position: fixed; inset: 0; z-index: -1; overflow: hidden;
   background: var(--bg-main);
 }
-.gradient-layer {
-  position: absolute; inset: 0;
-  background: linear-gradient(-45deg, var(--pink-200), var(--purple-200), var(--pink-300), var(--purple-100));
-  background-size: 400% 400%;
-  animation: gradientFlow 15s ease infinite;
-  opacity: 0.7; /* Soft aesthetic */
-}
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 #particles-canvas {
   position: absolute; inset: 0; pointer-events: none; z-index: 2;
 }
 
-/* ============== GLASS CARD ============== */
+/* ============== SOLID CARD (Replaces Glass) ============== */
 .glass-card {
-  background: var(--card-glass);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--border-glass);
+  background: var(--card-solid);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  box-shadow: 0 8px 32px rgba(216, 180, 254, 0.15);
+  box-shadow: var(--shadow-card);
   transition: var(--transition);
 }
 .glass-card:hover {
-  border-color: #fff;
-  box-shadow: 0 12px 40px rgba(244, 114, 182, 0.25);
-  transform: translateY(-3px);
+  box-shadow: 0 16px 50px rgba(44, 31, 57, 0.1);
+  transform: translateY(-4px);
 }
 
 /* ============== HEADER ============== */
