@@ -172,6 +172,34 @@ button { border: none; cursor: pointer; background: none; font-family: var(--fon
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
+/* ============== IDIOMA (toggle fijo) ============== */
+.lang-floating {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  z-index: 1001;
+}
+.lang-toggle {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  color: var(--text-base);
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 18px rgba(192, 132, 252, 0.2);
+}
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: var(--pink-400);
+  transform: translateY(-1px);
+}
+
 /* ============== BUTTONS ============== */
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
@@ -549,6 +577,7 @@ button { border: none; cursor: pointer; background: none; font-family: var(--fon
 
 /* ============== MOBILE NAV ============== */
 @media (max-width: 900px) {
+  .lang-floating { right: 72px; }
   .nav {
     position: fixed; top: 0; right: -100%; width: 75%; max-width: 320px; height: 100vh;
     background: rgba(255, 255, 255, 0.95);

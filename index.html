@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Valentina Mancilla — Desarrolladora de Software</title>
-  <meta name="description" content="Portafolio de Valentina Mancilla, desarrolladora de software junior con habilidades en Python, JavaScript, HTML/CSS y más." />
+  <title id="page-title">Valentina Mancilla — Desarrolladora de Software</title>
+  <meta id="page-desc" name="description" content="Portafolio de Valentina Mancilla, desarrolladora de software junior con habilidades en Python, JavaScript, HTML/CSS y más." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
@@ -13,13 +13,17 @@
 </head>
 <body>
 
+  <div class="lang-floating">
+    <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">EN</button>
+  </div>
+
   <!-- =================== SPLASH SCREEN =================== -->
   <div class="splash" id="splash">
     <div class="splash-content">
       <div class="splash-logo">VMC<span>.</span></div>
-      <p class="splash-sub">Portafolio &lt;Valentina Mancilla Casanova /&gt;</p>
+      <p class="splash-sub" data-i18n="splash.sub">Portafolio &lt;Valentina Mancilla Casanova /&gt;</p>
       <button class="splash-btn" id="splash-btn">
-        <span>[ INICIAR ]</span>
+        <span data-i18n="splash.btn">[ INICIAR ]</span>
         <i class="fas fa-arrow-right"></i>
       </button>
     </div>
@@ -38,14 +42,14 @@
       <a href="#hero" class="logo">VMC<span>.</span></a>
       <nav class="nav">
         <ul>
-          <li><a href="#hero" class="nav-link active">Inicio</a></li>
-          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+          <li><a href="#hero" class="nav-link active" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link" data-i18n="nav.about">Sobre mí</a></li>
+          <li><a href="#habilidades" class="nav-link" data-i18n="nav.skills">Habilidades</a></li>
+          <li><a href="#proyectos" class="nav-link" data-i18n="nav.projects">Proyectos</a></li>
+          <li><a href="#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" data-i18n-aria="aria.menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -54,21 +58,21 @@
   <!-- =================== HERO =================== -->
   <section id="hero" class="hero-section">
     <div class="hero-content">
-      <span class="hero-greeting">✦ Hola, soy</span>
+      <span class="hero-greeting" data-i18n="hero.greeting">✦ Hola, soy</span>
       <h1 class="hero-name glitch" data-text="Valentina Mancilla Casanova">Valentina Mancilla Casanova</h1>
       <div class="typewriter-wrap">
-        <span class="tw-prefix">Soy</span>
+        <span class="tw-prefix" data-i18n="hero.tw_prefix">Soy</span>
         <span class="tw-cursor-wrap">
           <span class="typewriter" id="typewriter"></span>
           <span class="tw-cursor">|</span>
         </span>
       </div>
-      <p class="hero-desc">
+      <p class="hero-desc" data-i18n="hero.desc">
         Desarrolladora de software junior con enfoque en desarrollo web, frontend y backend, utilizando Python y JavaScript. Capaz de resolver problemas con pensamiento lógico y arquitectura MVC.
       </p>
       <div class="hero-ctas">
-        <a href="#proyectos" class="btn-primary">Ver proyectos <i class="fas fa-chevron-down"></i></a>
-        <a href="#contacto" class="btn-outline">Contáctame <i class="fas fa-paper-plane"></i></a>
+        <a href="#proyectos" class="btn-primary"><span data-i18n="hero.cta_projects">Ver proyectos</span> <i class="fas fa-chevron-down"></i></a>
+        <a href="#contacto" class="btn-outline"><span data-i18n="hero.cta_contact">Contáctame</span> <i class="fas fa-paper-plane"></i></a>
       </div>
       <div class="hero-tags">
         <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">MySQL</span>
@@ -82,16 +86,16 @@
       <div class="hero-card-body code-block">
         <span class="cline"><span class="ck">const</span> <span class="cv">dev</span> = {</span>
         <span class="cline">&nbsp;&nbsp;nombre: <span class="cs">"Valentina Mancilla Casanova"</span>,</span>
-        <span class="cline">&nbsp;&nbsp;rol: <span class="cs">"Software Developer jr"</span>,</span>
+        <span class="cline">&nbsp;&nbsp;rol: <span class="cs" data-i18n-code="code.role">"Software Developer jr"</span>,</span>
         <span class="cline">&nbsp;&nbsp;stack: [<span class="cs">"Python"</span>, <span class="cs">"JS"</span>, <span class="cs">"HTML"</span>, <span class="cs">"CSS"</span>],</span>
         <span class="cline">&nbsp;&nbsp;disponible: <span class="ck">true</span>,</span>
-        <span class="cline">&nbsp;&nbsp;pasión: <span class="cs">"transformar ideas en código"</span></span>
+        <span class="cline">&nbsp;&nbsp;pasión: <span class="cs" data-i18n-code="code.passion">"transformar ideas en código"</span></span>
         <span class="cline">};</span>
       </div>
       <ul class="hero-card-checks">
-        <li><i class="fas fa-check-circle"></i> Interfaces responsivas & UX-first</li>
-        <li><i class="fas fa-check-circle"></i> Frontend y Backend con Python</li>
-        <li><i class="fas fa-check-circle"></i> Control de versiones con Git / GitHub</li>
+        <li><i class="fas fa-check-circle"></i> <span data-i18n="hero.check1">Interfaces responsivas & UX-first</span></li>
+        <li><i class="fas fa-check-circle"></i> <span data-i18n="hero.check2">Frontend y Backend con Python</span></li>
+        <li><i class="fas fa-check-circle"></i> <span data-i18n="hero.check3">Control de versiones con Git / GitHub</span></li>
       </ul>
     </div>
   </section>
@@ -99,44 +103,44 @@
   <!-- =================== SOBRE MI =================== -->
   <section id="sobre-mi" class="section reveal">
     <div class="section-inner">
-      <div class="section-tag">SOBRE MÍ</div>
-      <h2 class="section-title">¿Quién soy?</h2>
+      <div class="section-tag" data-i18n="about.tag">SOBRE MÍ</div>
+      <h2 class="section-title" data-i18n="about.title">¿Quién soy?</h2>
       <div class="about-grid">
         <div class="about-text glass-card">
-          <p>
+          <p data-i18n-html="about.p1">
             <strong>Desarrolladora de software junior con enfoque en desarrollo web, frontend y backend, utilizando Python y JavaScript.</strong> Cuenta con experiencia desarrollando aplicaciones web y de consola mediante proyectos prácticos, como sistemas de gestión, plataformas e-commerce y aplicaciones con arquitectura MVC.
           </p>
-          <p style="margin-top:14px;">
+          <p style="margin-top:14px;" data-i18n-html="about.p2">
             Maneja tecnologías como <strong>HTML5, CSS3, JavaScript, Python y MySQL</strong>, además de control de versiones con Git. Se caracteriza por su aprendizaje rápido, pensamiento lógico y capacidad para resolver problemas en entornos de desarrollo colaborativo.
           </p>
           <div class="about-stats" style="gap:30px; align-items:flex-start; text-align:left; border-top: 2px dashed var(--purple-200); padding-top:24px; margin-top:24px;">
-            <div class="stat"><span style="color:var(--text-muted); font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Competencias</span><p style="font-size:0.95rem; font-weight:600; line-height:1.6; color:var(--purple-400); margin:0;">Resolución de problemas<br>Trabajo en equipo<br>Aprendizaje rápido<br>Comunicación efectiva<br>Adaptabilidad</p></div>
-            <div class="stat"><span style="color:var(--text-muted); font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Idiomas</span><p style="font-size:0.95rem; font-weight:600; line-height:1.6; color:var(--purple-400); margin:0;">Inglés — B1<br>Español — Nativo</p></div>
+            <div class="stat"><span style="color:var(--text-muted); font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;" data-i18n="about.competencias_label">Competencias</span><p data-i18n-html="about.competencias_list" style="font-size:0.95rem; font-weight:600; line-height:1.6; color:var(--purple-400); margin:0;">Resolución de problemas<br>Trabajo en equipo<br>Aprendizaje rápido<br>Comunicación efectiva<br>Adaptabilidad</p></div>
+            <div class="stat"><span style="color:var(--text-muted); font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;" data-i18n="about.idiomas_label">Idiomas</span><p data-i18n-html="about.idiomas_list" style="font-size:0.95rem; font-weight:600; line-height:1.6; color:var(--purple-400); margin:0;">Inglés — B1<br>Español — Nativo</p></div>
           </div>
         </div>
         <div class="about-timeline">
           <div class="tl-item glass-card reveal">
             <div class="tl-icon"><i class="fas fa-code"></i></div>
             <div class="tl-content">
-              <span class="tl-date">En proceso</span>
-              <h3>Técnico en desarrollo de software</h3>
-              <p>Campuslands Floridablanca</p>
+              <span class="tl-date" data-i18n="timeline.status_progress">En proceso</span>
+              <h3 data-i18n="timeline.t1_title">Técnico en desarrollo de software</h3>
+              <p data-i18n="timeline.t1_place">Campuslands Floridablanca</p>
             </div>
           </div>
           <div class="tl-item glass-card reveal">
             <div class="tl-icon"><i class="fas fa-language"></i></div>
             <div class="tl-content">
-              <span class="tl-date">En proceso</span>
-              <h3>Inglés elemental</h3>
-              <p>Smart Academia</p>
+              <span class="tl-date" data-i18n="timeline.status_progress">En proceso</span>
+              <h3 data-i18n="timeline.t2_title">Inglés elemental</h3>
+              <p data-i18n="timeline.t2_place">Smart Academia</p>
             </div>
           </div>
           <div class="tl-item glass-card reveal">
             <div class="tl-icon"><i class="fas fa-graduation-cap"></i></div>
             <div class="tl-content">
               <span class="tl-date">2024</span>
-              <h3>Bachiller, Técnico en bellas artes</h3>
-              <p>Colegio Campestre Goyavier</p>
+              <h3 data-i18n="timeline.t3_title">Bachiller, Técnico en bellas artes</h3>
+              <p data-i18n="timeline.t3_place">Colegio Campestre Goyavier</p>
             </div>
           </div>
         </div>
@@ -147,44 +151,44 @@
   <!-- =================== HABILIDADES =================== -->
   <section id="habilidades" class="section reveal">
     <div class="section-inner">
-      <div class="section-tag">TECNOLOGÍAS</div>
-      <h2 class="section-title">Mi Stack</h2>
-      <p class="section-sub">Las herramientas que uso para construir soluciones. Pasa el cursor para ver los detalles.</p>
+      <div class="section-tag" data-i18n="skills.tag">TECNOLOGÍAS</div>
+      <h2 class="section-title" data-i18n="skills.title">Mi Stack</h2>
+      <p class="section-sub" data-i18n="skills.sub">Las herramientas que uso para construir soluciones. Pasa el cursor para ver los detalles.</p>
 
       <!-- Grid estático de habilidades (sin duplicados) -->
       <div class="skills-static-grid reveal">
-        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /><b>HTML5</b><span>Frontend</span></div>
-        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /><b>CSS3</b><span>Frontend</span></div>
-        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /><b>JavaScript</b><span>Frontend</span></div>
-        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><b>Python</b><span>Backend</span></div>
-        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" /><b>C#</b><span>Backend</span></div>
-        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" /><b>MySQL</b><span>Base de datos</span></div>
-        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /><b>Git</b><span>Versiones</span></div>
-        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /><b>GitHub</b><span>Repos</span></div>
-        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" alt="Scrum" /><b>Scrum</b><span>Metodología</span></div>
+        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /><b>HTML5</b><span data-i18n="skills.cat_frontend">Frontend</span></div>
+        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /><b>CSS3</b><span data-i18n="skills.cat_frontend">Frontend</span></div>
+        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /><b>JavaScript</b><span data-i18n="skills.cat_frontend">Frontend</span></div>
+        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><b>Python</b><span data-i18n="skills.cat_backend">Backend</span></div>
+        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" /><b>C#</b><span data-i18n="skills.cat_backend">Backend</span></div>
+        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" /><b>MySQL</b><span data-i18n="skills.cat_db">Base de datos</span></div>
+        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /><b>Git</b><span data-i18n="skills.cat_git">Versiones</span></div>
+        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /><b>GitHub</b><span data-i18n="skills.cat_repos">Repos</span></div>
+        <div class="skill-card glass-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" alt="Scrum" /><b>Scrum</b><span data-i18n="skills.cat_scrum">Metodología</span></div>
       </div>
 
       <!-- Servicios como Grid -->
       <div class="services-grid" style="margin-top:60px;">
         <div class="service-card glass-card reveal">
           <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-          <h3>Frontend</h3>
-          <p>Interfaces responsivas y accesibles con HTML5, CSS3 y JavaScript puro.</p>
+          <h3 data-i18n="services.s1_title">Frontend</h3>
+          <p data-i18n="services.s1_desc">Interfaces responsivas y accesibles con HTML5, CSS3 y JavaScript puro.</p>
         </div>
         <div class="service-card glass-card reveal">
           <div class="service-icon"><i class="fas fa-server"></i></div>
-          <h3>Backend</h3>
-          <p>Lógica de negocio, APIs y bases de datos con Python y MySQL.</p>
+          <h3 data-i18n="services.s2_title">Backend</h3>
+          <p data-i18n="services.s2_desc">Lógica de negocio, APIs y bases de datos con Python y MySQL.</p>
         </div>
         <div class="service-card glass-card reveal">
           <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-          <h3>Sistemas</h3>
-          <p>Aplicaciones de gestión con arquitectura MVC y validación de datos.</p>
+          <h3 data-i18n="services.s3_title">Sistemas</h3>
+          <p data-i18n="services.s3_desc">Aplicaciones de gestión con arquitectura MVC y validación de datos.</p>
         </div>
         <div class="service-card glass-card reveal">
           <div class="service-icon"><i class="fas fa-code-branch"></i></div>
-          <h3>Control de versiones</h3>
-          <p>Organización del trabajo con Git, GitHub y buenas prácticas en equipo.</p>
+          <h3 data-i18n="services.s4_title">Control de versiones</h3>
+          <p data-i18n="services.s4_desc">Organización del trabajo con Git, GitHub y buenas prácticas en equipo.</p>
         </div>
       </div>
     </div>
@@ -193,9 +197,9 @@
   <!-- =================== PROYECTOS =================== -->
   <section id="proyectos" class="section reveal">
     <div class="section-inner">
-      <div class="section-tag">PORTAFOLIO</div>
-      <h2 class="section-title">Proyectos Destacados</h2>
-      <p class="section-sub">Cada proyecto representa un reto real donde apliqué habilidades técnicas y resolución de problemas.</p>
+      <div class="section-tag" data-i18n="projects.tag">PORTAFOLIO</div>
+      <h2 class="section-title" data-i18n="projects.title">Proyectos Destacados</h2>
+      <p class="section-sub" data-i18n="projects.sub">Cada proyecto representa un reto real donde apliqué habilidades técnicas y resolución de problemas.</p>
 
       <div class="projects-grid">
         <article class="project-card glass-card reveal">
@@ -205,8 +209,8 @@
               <a href="https://github.com/juaquija22/Proyecto_Python_1Quijano.Juan_2Mancilla.valentina.git" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
           </div>
-          <h3 style="font-size:1.1rem; line-height:1.3;">Gestión de Torneos de Fútbol</h3>
-          <p>App de consola en Python para gestión deportiva (equipos, jugadores, estadísticas), manejando persistencia de datos mediante archivos JSON y estructura modular escalable.</p>
+          <h3 style="font-size:1.1rem; line-height:1.3;" data-i18n="projects.p1_title">Gestión de Torneos de Fútbol</h3>
+          <p data-i18n="projects.p1_desc">App de consola en Python para gestión deportiva (equipos, jugadores, estadísticas), manejando persistencia de datos mediante archivos JSON y estructura modular escalable.</p>
           <div class="project-tags">
             <span>Python</span><span>JSON</span><span>Git</span>
           </div>
@@ -219,8 +223,8 @@
               <a href="https://github.com/valemancilla/Sistema_de_Gestion_Inmobiliaria.git" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
           </div>
-          <h3 style="font-size:1.1rem; line-height:1.3;">BD Sistema de Gestión Inmobiliaria</h3>
-          <p>Diseño, implementación y modelado MER (3FN) de BD relacional. Desarrollo de triggers de auditoría, funciones para cálculos de comisiones, roles de usuario y optimización de reportes.</p>
+          <h3 style="font-size:1.1rem; line-height:1.3;" data-i18n="projects.p2_title">BD Sistema de Gestión Inmobiliaria</h3>
+          <p data-i18n="projects.p2_desc">Diseño, implementación y modelado MER (3FN) de BD relacional. Desarrollo de triggers de auditoría, funciones para cálculos de comisiones, roles de usuario y optimización de reportes.</p>
           <div class="project-tags">
             <span>MySQL</span><span>SQL</span><span>Normalización</span>
           </div>
@@ -233,8 +237,8 @@
               <a href="https://magenta-praline-83c533.netlify.app/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
           </div>
-          <h3 style="font-size:1.1rem; line-height:1.3;">Hotel El Rincón del Carmen</h3>
-          <p>App web de gestión de reservas hoteleras con dashboard CRUD y autenticación con LocalStorage. Código organizado bajo arquitectura MVC para mejor mantenimiento.</p>
+          <h3 style="font-size:1.1rem; line-height:1.3;" data-i18n="projects.p3_title">Hotel El Rincón del Carmen</h3>
+          <p data-i18n="projects.p3_desc">App web de gestión de reservas hoteleras con dashboard CRUD y autenticación con LocalStorage. Código organizado bajo arquitectura MVC para mejor mantenimiento.</p>
           <div class="project-tags">
             <span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>LocalStorage</span>
           </div>
@@ -246,50 +250,50 @@
   <!-- =================== CONTACTO =================== -->
   <section id="contacto" class="section reveal">
     <div class="section-inner contact-inner">
-      <div class="section-tag">CONTACTO</div>
-      <h2 class="section-title">¿Hablamos?</h2>
-      <p class="section-sub">Si querés cotizar un servicio, hablar de una vacante o proponer una idea, escribime.</p>
+      <div class="section-tag" data-i18n="contact.tag">CONTACTO</div>
+      <h2 class="section-title" data-i18n="contact.title">¿Hablamos?</h2>
+      <p class="section-sub" data-i18n="contact.sub">Si querés cotizar un servicio, hablar de una vacante o proponer una idea, escribime.</p>
 
       <div class="contact-grid">
         <div class="contact-info glass-card">
           <div class="contact-item">
             <div class="ci-icon"><i class="fas fa-envelope"></i></div>
             <div>
-              <span>Email</span>
+              <span data-i18n="contact.label_email">Email</span>
               <a href="mailto:valem2958@gmail.com">valem2958@gmail.com</a>
             </div>
           </div>
           <div class="contact-item">
             <div class="ci-icon"><i class="fas fa-phone"></i></div>
             <div>
-              <span>Teléfono</span>
+              <span data-i18n="contact.label_phone">Teléfono</span>
               <a href="tel:+573137713137">+57 3137713137</a>
             </div>
           </div>
           <div class="contact-item">
             <div class="ci-icon"><i class="fas fa-id-card"></i></div>
             <div>
-              <span>Documento</span>
+              <span data-i18n="contact.label_doc">Documento</span>
               <span style="font-size: 1rem; color: var(--text-base); font-weight: 700;">1095305907</span>
             </div>
           </div>
           <div class="contact-item">
             <div class="ci-icon"><i class="fab fa-github"></i></div>
             <div>
-              <span>GitHub</span>
+              <span data-i18n="contact.label_github">GitHub</span>
               <a href="https://github.com/valemancilla" target="_blank">github.com/valemancilla</a>
             </div>
           </div>
           <div class="contact-item">
             <div class="ci-icon"><i class="fab fa-linkedin"></i></div>
             <div>
-              <span>LinkedIn</span>
+              <span data-i18n="contact.label_linkedin">LinkedIn</span>
               <a href="https://www.linkedin.com/in/valentina-mancilla-casanova-083376391/" target="_blank">Valentina Mancilla Casanova</a>
             </div>
           </div>
           <div class="contact-ctas">
-            <a href="mailto:valem2958@gmail.com" class="btn-primary">Enviar Email <i class="fas fa-paper-plane"></i></a>
-            <a href="https://github.com/valemancilla" target="_blank" class="btn-outline">Ver GitHub <i class="fab fa-github"></i></a>
+            <a href="mailto:valem2958@gmail.com" class="btn-primary"><span data-i18n="contact.btn_email">Enviar Email</span> <i class="fas fa-paper-plane"></i></a>
+            <a href="https://github.com/valemancilla" target="_blank" class="btn-outline"><span data-i18n="contact.btn_github">Ver GitHub</span> <i class="fab fa-github"></i></a>
           </div>
         </div>
         <div class="contact-deco glass-card">
@@ -297,8 +301,8 @@
             <div class="pulse-ring"></div>
             <div class="pulse-dot">VM</div>
           </div>
-          <p class="contact-status"><span class="status-dot"></span> Disponible para oportunidades</p>
-          <p class="contact-quote">"Transformo ideas en código con pasión y precisión."</p>
+          <p class="contact-status"><span class="status-dot"></span> <span data-i18n="contact.status">Disponible para oportunidades</span></p>
+          <p class="contact-quote" data-i18n="contact.quote">"Transformo ideas en código con pasión y precisión."</p>
         </div>
       </div>
     </div>
@@ -308,7 +312,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <a href="#hero" class="logo">VM<span>.</span></a>
-      <p>&copy; <span id="year"></span> Valentina Mancilla · Desarrolladora de Software Junior</p>
+      <p>&copy; <span id="year"></span> <span data-i18n="footer.line">Valentina Mancilla · Desarrolladora de Software Junior</span></p>
       <div class="footer-socials">
         <a href="https://github.com/valemancilla" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/valentina-mancilla-casanova-083376391/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -318,9 +322,217 @@
   </footer>
 
   <!-- =================== SCROLL TO TOP =================== -->
-  <button class="scroll-top" id="scroll-top" aria-label="Volver arriba"><i class="fas fa-chevron-up"></i></button>
+  <button class="scroll-top" id="scroll-top" aria-label="Volver arriba" data-i18n-aria="aria.scroll_top"><i class="fas fa-chevron-up"></i></button>
 
   <script>
+    // ========== I18N (ES / EN) ==========
+    const I18N = {
+      es: {
+        'meta.title': 'Valentina Mancilla — Desarrolladora de Software',
+        'meta.desc': 'Portafolio de Valentina Mancilla, desarrolladora de software junior con habilidades en Python, JavaScript, HTML/CSS y más.',
+        'splash.sub': 'Portafolio <Valentina Mancilla Casanova />',
+        'splash.btn': '[ INICIAR ]',
+        'nav.home': 'Inicio',
+        'nav.about': 'Sobre mí',
+        'nav.skills': 'Habilidades',
+        'nav.projects': 'Proyectos',
+        'nav.contact': 'Contacto',
+        'hero.greeting': '✦ Hola, soy',
+        'hero.tw_prefix': 'Soy',
+        'hero.desc': 'Desarrolladora de software junior con enfoque en desarrollo web, frontend y backend, utilizando Python y JavaScript. Capaz de resolver problemas con pensamiento lógico y arquitectura MVC.',
+        'hero.cta_projects': 'Ver proyectos',
+        'hero.cta_contact': 'Contáctame',
+        'hero.check1': 'Interfaces responsivas & UX-first',
+        'hero.check2': 'Frontend y Backend con Python',
+        'hero.check3': 'Control de versiones con Git / GitHub',
+        'code.role': '"Software Developer jr"',
+        'code.passion': '"transformar ideas en código"',
+        'about.tag': 'SOBRE MÍ',
+        'about.title': '¿Quién soy?',
+        'about.p1': '<strong>Desarrolladora de software junior con enfoque en desarrollo web, frontend y backend, utilizando Python y JavaScript.</strong> Cuenta con experiencia desarrollando aplicaciones web y de consola mediante proyectos prácticos, como sistemas de gestión, plataformas e-commerce y aplicaciones con arquitectura MVC.',
+        'about.p2': 'Maneja tecnologías como <strong>HTML5, CSS3, JavaScript, Python y MySQL</strong>, además de control de versiones con Git. Se caracteriza por su aprendizaje rápido, pensamiento lógico y capacidad para resolver problemas en entornos de desarrollo colaborativo.',
+        'about.competencias_label': 'Competencias',
+        'about.competencias_list': 'Resolución de problemas<br>Trabajo en equipo<br>Aprendizaje rápido<br>Comunicación efectiva<br>Adaptabilidad',
+        'about.idiomas_label': 'Idiomas',
+        'about.idiomas_list': 'Inglés — B1<br>Español — Nativo',
+        'timeline.status_progress': 'En proceso',
+        'timeline.t1_title': 'Técnico en desarrollo de software',
+        'timeline.t1_place': 'Campuslands Floridablanca',
+        'timeline.t2_title': 'Inglés elemental',
+        'timeline.t2_place': 'Smart Academia',
+        'timeline.t3_title': 'Bachiller, Técnico en bellas artes',
+        'timeline.t3_place': 'Colegio Campestre Goyavier',
+        'skills.tag': 'TECNOLOGÍAS',
+        'skills.title': 'Mi Stack',
+        'skills.sub': 'Las herramientas que uso para construir soluciones. Pasa el cursor para ver los detalles.',
+        'skills.cat_frontend': 'Frontend',
+        'skills.cat_backend': 'Backend',
+        'skills.cat_db': 'Base de datos',
+        'skills.cat_git': 'Versiones',
+        'skills.cat_repos': 'Repos',
+        'skills.cat_scrum': 'Metodología',
+        'services.s1_title': 'Frontend',
+        'services.s1_desc': 'Interfaces responsivas y accesibles con HTML5, CSS3 y JavaScript puro.',
+        'services.s2_title': 'Backend',
+        'services.s2_desc': 'Lógica de negocio, APIs y bases de datos con Python y MySQL.',
+        'services.s3_title': 'Sistemas',
+        'services.s3_desc': 'Aplicaciones de gestión con arquitectura MVC y validación de datos.',
+        'services.s4_title': 'Control de versiones',
+        'services.s4_desc': 'Organización del trabajo con Git, GitHub y buenas prácticas en equipo.',
+        'projects.tag': 'PORTAFOLIO',
+        'projects.title': 'Proyectos Destacados',
+        'projects.sub': 'Cada proyecto representa un reto real donde apliqué habilidades técnicas y resolución de problemas.',
+        'projects.p1_title': 'Gestión de Torneos de Fútbol',
+        'projects.p1_desc': 'App de consola en Python para gestión deportiva (equipos, jugadores, estadísticas), manejando persistencia de datos mediante archivos JSON y estructura modular escalable.',
+        'projects.p2_title': 'BD Sistema de Gestión Inmobiliaria',
+        'projects.p2_desc': 'Diseño, implementación y modelado MER (3FN) de BD relacional. Desarrollo de triggers de auditoría, funciones para cálculos de comisiones, roles de usuario y optimización de reportes.',
+        'projects.p3_title': 'Hotel El Rincón del Carmen',
+        'projects.p3_desc': 'App web de gestión de reservas hoteleras con dashboard CRUD y autenticación con LocalStorage. Código organizado bajo arquitectura MVC para mejor mantenimiento.',
+        'contact.tag': 'CONTACTO',
+        'contact.title': '¿Hablamos?',
+        'contact.sub': 'Si querés cotizar un servicio, hablar de una vacante o proponer una idea, escribime.',
+        'contact.label_email': 'Email',
+        'contact.label_phone': 'Teléfono',
+        'contact.label_doc': 'Documento',
+        'contact.label_github': 'GitHub',
+        'contact.label_linkedin': 'LinkedIn',
+        'contact.btn_email': 'Enviar Email',
+        'contact.btn_github': 'Ver GitHub',
+        'contact.status': 'Disponible para oportunidades',
+        'contact.quote': '"Transformo ideas en código con pasión y precisión."',
+        'footer.line': 'Valentina Mancilla · Desarrolladora de Software Junior',
+        'aria.menu': 'Abrir menú',
+        'aria.scroll_top': 'Volver arriba',
+        'aria.lang_to_en': 'Cambiar idioma a inglés',
+        'aria.lang_to_es': 'Cambiar idioma a español'
+      },
+      en: {
+        'meta.title': 'Valentina Mancilla — Software Developer',
+        'meta.desc': 'Portfolio of Valentina Mancilla, junior software developer skilled in Python, JavaScript, HTML/CSS, and more.',
+        'splash.sub': 'Portfolio <Valentina Mancilla Casanova />',
+        'splash.btn': '[ START ]',
+        'nav.home': 'Home',
+        'nav.about': 'About',
+        'nav.skills': 'Skills',
+        'nav.projects': 'Projects',
+        'nav.contact': 'Contact',
+        'hero.greeting': '✦ Hi, I am',
+        'hero.tw_prefix': "I'm",
+        'hero.desc': 'Junior software developer focused on web development (frontend and backend) using Python and JavaScript. I solve problems with logical thinking and MVC architecture.',
+        'hero.cta_projects': 'View projects',
+        'hero.cta_contact': 'Contact me',
+        'hero.check1': 'Responsive interfaces & UX-first',
+        'hero.check2': 'Frontend & Backend with Python',
+        'hero.check3': 'Version control with Git / GitHub',
+        'code.role': '"Junior Software Developer"',
+        'code.passion': '"turn ideas into code"',
+        'about.tag': 'ABOUT ME',
+        'about.title': 'Who am I?',
+        'about.p1': '<strong>Junior software developer focused on web development, frontend and backend, using Python and JavaScript.</strong> I have experience building web and console applications through hands-on projects such as management systems, e-commerce platforms, and MVC-based applications.',
+        'about.p2': 'I work with <strong>HTML5, CSS3, JavaScript, Python, and MySQL</strong>, plus version control with Git. I stand out for fast learning, logical thinking, and problem solving in collaborative development environments.',
+        'about.competencias_label': 'Skills',
+        'about.competencias_list': 'Problem solving<br>Teamwork<br>Fast learning<br>Effective communication<br>Adaptability',
+        'about.idiomas_label': 'Languages',
+        'about.idiomas_list': 'English — B1<br>Spanish — Native',
+        'timeline.status_progress': 'In progress',
+        'timeline.t1_title': 'Software development technician',
+        'timeline.t1_place': 'Campuslands Floridablanca',
+        'timeline.t2_title': 'Elementary English',
+        'timeline.t2_place': 'Smart Academia',
+        'timeline.t3_title': 'High school graduate, Fine arts technician',
+        'timeline.t3_place': 'Colegio Campestre Goyavier',
+        'skills.tag': 'TECHNOLOGIES',
+        'skills.title': 'My Stack',
+        'skills.sub': 'The tools I use to build solutions. Hover to see more details.',
+        'skills.cat_frontend': 'Frontend',
+        'skills.cat_backend': 'Backend',
+        'skills.cat_db': 'Database',
+        'skills.cat_git': 'Versioning',
+        'skills.cat_repos': 'Repos',
+        'skills.cat_scrum': 'Methodology',
+        'services.s1_title': 'Frontend',
+        'services.s1_desc': 'Responsive, accessible interfaces with HTML5, CSS3, and vanilla JavaScript.',
+        'services.s2_title': 'Backend',
+        'services.s2_desc': 'Business logic, APIs, and databases with Python and MySQL.',
+        'services.s3_title': 'Systems',
+        'services.s3_desc': 'Management applications with MVC architecture and data validation.',
+        'services.s4_title': 'Version control',
+        'services.s4_desc': 'Organized workflows with Git, GitHub, and team best practices.',
+        'projects.tag': 'PORTFOLIO',
+        'projects.title': 'Featured Projects',
+        'projects.sub': 'Each project is a real challenge where I applied technical skills and problem solving.',
+        'projects.p1_title': 'Football Tournament Management',
+        'projects.p1_desc': 'Python console app for sports management (teams, players, statistics) with JSON persistence and a scalable modular structure.',
+        'projects.p2_title': 'Real Estate Management Database',
+        'projects.p2_desc': 'Design, implementation, and MER modeling (3NF) for a relational database. Audit triggers, commission calculations, user roles, and optimized reporting.',
+        'projects.p3_title': 'Hotel El Rincón del Carmen',
+        'projects.p3_desc': 'Web app for hotel reservations with a CRUD dashboard and LocalStorage authentication. MVC structure for easier maintenance.',
+        'contact.tag': 'CONTACT',
+        'contact.title': "Let's talk?",
+        'contact.sub': 'If you want a quote, to discuss a role, or share an idea, message me.',
+        'contact.label_email': 'Email',
+        'contact.label_phone': 'Phone',
+        'contact.label_doc': 'ID',
+        'contact.label_github': 'GitHub',
+        'contact.label_linkedin': 'LinkedIn',
+        'contact.btn_email': 'Send email',
+        'contact.btn_github': 'View GitHub',
+        'contact.status': 'Open to opportunities',
+        'contact.quote': '"I turn ideas into code with passion and precision."',
+        'footer.line': 'Valentina Mancilla · Junior Software Developer',
+        'aria.menu': 'Open menu',
+        'aria.scroll_top': 'Back to top',
+        'aria.lang_to_en': 'Switch language to English',
+        'aria.lang_to_es': 'Switch language to Spanish'
+      }
+    };
+
+    function getStoredLang() {
+      const v = localStorage.getItem('portfolio-lang');
+      return v === 'en' || v === 'es' ? v : 'es';
+    }
+
+    function applyLanguage(lang) {
+      const t = I18N[lang] || I18N.es;
+      document.documentElement.lang = lang === 'en' ? 'en' : 'es';
+      localStorage.setItem('portfolio-lang', lang);
+
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const k = el.getAttribute('data-i18n');
+        if (k && t[k] !== undefined) el.textContent = t[k];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+        const k = el.getAttribute('data-i18n-html');
+        if (k && t[k] !== undefined) el.innerHTML = t[k];
+      });
+      document.querySelectorAll('[data-i18n-code]').forEach((el) => {
+        const k = el.getAttribute('data-i18n-code');
+        if (k && t[k] !== undefined) el.textContent = t[k];
+      });
+      document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+        const k = el.getAttribute('data-i18n-aria');
+        if (k && t[k] !== undefined) el.setAttribute('aria-label', t[k]);
+      });
+
+      const titleEl = document.getElementById('page-title');
+      if (titleEl && t['meta.title']) titleEl.textContent = t['meta.title'];
+      const descEl = document.getElementById('page-desc');
+      if (descEl && t['meta.desc']) descEl.setAttribute('content', t['meta.desc']);
+
+      const langBtn = document.getElementById('lang-toggle');
+      if (langBtn) {
+        langBtn.textContent = lang === 'es' ? 'EN' : 'ES';
+        langBtn.setAttribute('aria-label', lang === 'es' ? t['aria.lang_to_en'] : t['aria.lang_to_es']);
+      }
+
+      if (typeof window.restartTypewriter === 'function') window.restartTypewriter();
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      const next = getStoredLang() === 'es' ? 'en' : 'es';
+      applyLanguage(next);
+    });
+
     // ========== SPLASH ==========
     const splash = document.getElementById('splash');
     const splashBtn = document.getElementById('splash-btn');
@@ -385,17 +597,53 @@
     })();
 
     // ========== TYPEWRITER ==========
-    const roles = ['Desarrolladora Frontend', 'Desarrolladora Backend', 'Creadora de experiencias web', 'Apasionada por el código limpio'];
-    let ri = 0, ci = 0, deleting = false;
+    const rolesByLang = {
+      es: ['Desarrolladora Frontend', 'Desarrolladora Backend', 'Creadora de experiencias web', 'Apasionada por el código limpio'],
+      en: ['Frontend Developer', 'Backend Developer', 'Web experience creator', 'Passionate about clean code']
+    };
+    let twGen = 0;
+    let twTimer = null;
+    let ri = 0;
+    let ci = 0;
+    let deleting = false;
     const tw = document.getElementById('typewriter');
-    function typeLoop() {
+
+    function getRolesForTypewriter() {
+      const lang = getStoredLang();
+      return rolesByLang[lang] || rolesByLang.es;
+    }
+
+    function typeLoop(gen) {
+      if (!tw) return;
+      if (gen !== twGen) return;
+      const roles = getRolesForTypewriter();
       const cur = roles[ri];
       tw.textContent = deleting ? cur.slice(0, ci--) : cur.slice(0, ci++);
-      if (!deleting && ci > cur.length) { deleting = true; setTimeout(typeLoop, 1200); return; }
-      if (deleting && ci < 0) { deleting = false; ri = (ri + 1) % roles.length; ci = 0; }
-      setTimeout(typeLoop, deleting ? 40 : 80);
+      if (!deleting && ci > cur.length) {
+        deleting = true;
+        twTimer = setTimeout(() => typeLoop(gen), 1200);
+        return;
+      }
+      if (deleting && ci < 0) {
+        deleting = false;
+        ri = (ri + 1) % roles.length;
+        ci = 0;
+      }
+      twTimer = setTimeout(() => typeLoop(gen), deleting ? 40 : 80);
     }
-    typeLoop();
+
+    function restartTypewriter() {
+      if (twTimer) clearTimeout(twTimer);
+      twGen++;
+      ri = 0;
+      ci = 0;
+      deleting = false;
+      if (tw) tw.textContent = '';
+      typeLoop(twGen);
+    }
+    window.restartTypewriter = restartTypewriter;
+
+    applyLanguage(getStoredLang());
 
     // ========== HEADER SCROLL ==========
     const header = document.getElementById('header');
