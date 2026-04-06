@@ -172,12 +172,11 @@ button { border: none; cursor: pointer; background: none; font-family: var(--fon
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-/* ============== IDIOMA (toggle fijo) ============== */
-.lang-floating {
-  position: fixed;
-  top: 18px;
-  right: 24px;
-  z-index: 1001;
+/* ============== IDIOMA ============== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .lang-toggle {
   font-family: inherit;
@@ -577,7 +576,6 @@ button { border: none; cursor: pointer; background: none; font-family: var(--fon
 
 /* ============== MOBILE NAV ============== */
 @media (max-width: 900px) {
-  .lang-floating { right: 72px; }
   .nav {
     position: fixed; top: 0; right: -100%; width: 75%; max-width: 320px; height: 100vh;
     background: rgba(255, 255, 255, 0.95);

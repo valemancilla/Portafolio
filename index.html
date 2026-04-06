@@ -13,10 +13,6 @@
 </head>
 <body>
 
-  <div class="lang-floating">
-    <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">EN</button>
-  </div>
-
   <!-- =================== SPLASH SCREEN =================== -->
   <div class="splash" id="splash">
     <div class="splash-content">
@@ -49,9 +45,12 @@
           <li><a href="#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú" data-i18n-aria="aria.menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-actions">
+        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" data-i18n-aria="aria.menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
